@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+{% block content %}
+  <h2 class="title">Welcome to <img src="../static/images/logo.png" alt="VelociRama" width="450px" height="auto">!!</h2>
+  {% if message %}
+  <div class="flash">
+	{{ message }}
+  </div>
+  {% endif %}
+{% endblock %}

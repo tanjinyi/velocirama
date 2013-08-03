@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VelociRama</title>
+		<link rel="stylesheet" href="/static/css/main.css"/>
+	</head>
+
+	<body>
+		<nav>
+			<!-- navigation links -->
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/create">Create</a></li>
+				<li><a href="/calendar">Calendar</a></li>
+				{% if session['logged_in'] %}
+				<li><a href="/logout">Logout</a></li>
+				{% else %}
+				<li><a href="/log">Login</a></li>
+				{% endif %}
+			</ul>
+		<!-- end navbar body -->
+		</nav>
+		<div id="content-wrap">
+			<section id="main-content-area">
+				<article class="single-block">
+			{% block content %}
+			{% endblock %}
+				</article>
+			</section>
+		</div>
+	</body>
+</html>

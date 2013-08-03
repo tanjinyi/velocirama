@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="listing">
+	<h2>Create an Ad!</h2>
+	<form enctype="multipart/form-data" method='post'>
+		<label for="qrcode">Convert to QR Code: </label>
+		<input type="url" id='qrcode' name="qrcode" required placeholder="Link to Content"><br/><br/>
+		<label for="image">Image</label>
+		<input type="file" id="image" name='image' required><br/><br/>
+		<label for="date">Validity Period</label>
+		<input type="date" id="date" name="startdate" required>to<input type="date" name="enddate" required><br/><br/>
+		<label for="time">Times to be Shown</label>
+		<input type="time" id="time" name="starttime" required>to<input type="time" name="endtime" required><br/><br/>
+		<input type="submit" name='button' class='buttons' value="Submit!" />
+	</form>
+</div>
+
+{% endblock %}

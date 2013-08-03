@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block content %}
+  <h1>Login</h1>
+  </br>
+  {% if error %}
+  <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+  <form action="" method=post>
+    {{ form.username.label }}
+    {{ form.username }}
+	</br>
+    {{ form.password.label }}
+    {{ form.password }} 
+	</br>
+    {{ form.submit }}
+  </form>
+{% for message in get_flashed_messages() %}
+    <div class=flash>
+        {{ message }}
+    </div>
+{% endfor %}
+{% endblock %}
